@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="jatin" id="jatin">
+    <button type="button" id="btn">Add jatin</button></button>
+</body>
+<img src="egg1.jpeg" id="image">
+<br>
+<button onclick="changeImages()" >Change image</button>
+<script>
+
+    var img = document.getElementById('image');
+    const images = ["egg2","egg3","egg4","egg5","egg6","egg7","egg8","egg9"];
+    var imagesLength = images.length;
+    var x=0;
+    function changeImages(){
+        img.src = images[x]+".jpeg";
+        x=x+1;
+        if(x==imagesLength)
+    {
+        x=0;
+    }
+
+
+    }
+
+
+</script>
+</html>
