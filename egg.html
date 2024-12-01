@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img onclick="changeImages()" src="/images/egg1.jpeg" id="image">
+    <br>
+    <!-- <button onclick="changeImages()">CLICK TO CRACK</button> -->
+    
+    <script>
+        var img = document.getElementById('image');
+        
+        // Create an array to hold the image paths from egg1.jpeg to egg9.jpeg
+        const images = ["/images/egg1.jpeg",
+            "/images/egg2.jpeg",
+            "/images/egg3.jpeg",
+            "/images/egg4.jpeg",
+            "/images/egg5.jpeg",
+            "/images/egg6.jpeg",
+            "/images/egg7.jpeg",
+            "/images/egg8.jpeg",
+            "/images/egg9.jpeg"
+        ];
+        
+        var imagesLength = images.length;
+        var x = 0;
+
+        function changeImages() {
+            // Update the image source from the array
+            img.src = images[x];
+            x = x + 1;
+            if (x == imagesLength) {
+                x = 0;
+            }
+        }
+    </script>
+</body>
+</html>
